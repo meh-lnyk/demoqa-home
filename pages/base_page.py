@@ -37,3 +37,6 @@ class BasePage:
 
     def scroll_into_view(self, locator):
         self.driver.execute_script("arguments[0].scrollIntoView();", locator)
+
+    def get_attribute(self, locator):
+        return self.driver.get_element(By.CSS_SELECTOR, f'[{locator}]').text
