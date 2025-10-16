@@ -34,3 +34,6 @@ class BasePage:
 
     def set_window_size_1000_by_1000(self):
         self.driver.set_window_size(1000, 1000)
+
+    def scroll_into_view(self, locator):
+        self.driver.execute_script("arguments[0].scrollIntoView();", locator)
