@@ -89,3 +89,13 @@ def test_webtables_form(browser):
     site_obj.find_element(site_obj.submit_form_button_locator).click()
     time.sleep(1)
     assert site_obj.find_element(site_obj.first_name_locator).text == new_first_name
+
+    # Subtask G
+    site_obj.find_element(site_obj.delete_4th_record_button_locator).click()
+    time.sleep(1)
+    assert site_obj.find_element(site_obj.first_name_locator).text == ' '
+    assert site_obj.find_element(site_obj.last_name_locator).text == ' '
+    assert site_obj.find_element(site_obj.email_locator).text == ' '
+    assert site_obj.find_element(site_obj.age_locator).text == ' '
+    assert site_obj.find_element(site_obj.salary_locator).text == ' '
+    assert site_obj.find_element(site_obj.department_locator).text == ' '
