@@ -1,5 +1,4 @@
 import time
-
 from pages.webtables import Webtables
 
 def test_webtables_form(browser):
