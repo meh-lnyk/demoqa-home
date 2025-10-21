@@ -10,5 +10,6 @@ class ModalDialogs(BasePage):
     main_page_button_locator = '#app > header > a'
     small_modal_button_locator = '#showSmallModal'
     large_modal_button_locator = '#showLargeModal'
+    small_modal_close_button_locator = '#closeSmallModal'
+    large_modal_close_button_locator = '#closeLargeModal'
     modal_content_locator = 'body > div.fade.modal.show > div > div'
-    modal_close_button_locator = 'body > div.fade.modal.show > div > div > div.modal-header > button'
