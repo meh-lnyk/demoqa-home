@@ -40,3 +40,10 @@ class BasePage:
 
     def get_attribute(self, locator):
         return self.driver.get_element(By.CSS_SELECTOR, f'[{locator}]').text
+
+    def has_sort_class(self, locator):
+        has_sort = False
+        class_string = self.find_element(locator).get_attribute('class')
+        if '-sort-asc' or '-sort-desc' in class_string.split():
+            has_sort = True
+        return has_sort
